@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. CONFIGURAÇÕES GLOBAIS
-   ========================================================================== */
+
 * {
     padding: 0;
     margin: 0;
@@ -18,9 +16,7 @@ body {
 }
 
 
-/* ==========================================================================
-   2. HEADER (ESTILO PÍLULA)
-   ========================================================================== */
+
 header {
     background-color: #0b0b0b;
     padding: 10px 40px;
@@ -92,9 +88,7 @@ header .navegacao-primaria li a:hover {
     color: #0b95f1;
 }
 
-/* ==========================================================================
-   3. SEÇÃO HOME
-   ========================================================================== */
+
 .section-div {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -163,9 +157,7 @@ header .navegacao-primaria li a:hover {
     max-width: 90%;
 }
 
-/* ==========================================================================
-   4. SEÇÃO SOBRE (LARGURA TOTAL)
-   ========================================================================== */
+
 .sobre {
     background-color: #0c0b0b; 
     width: 100%;               
@@ -275,9 +267,7 @@ header .navegacao-primaria li a:hover {
     font-size: 1.3rem;
 }
 
-/* ==========================================================================
-   5. SEÇÃO SERVICES (MODIFICADA PARA CARDS QUADRADOS)
-   ========================================================================== */
+
 .services {
     background-color: #151515;
     padding: 100px 0;
@@ -379,9 +369,7 @@ header .navegacao-primaria li a:hover {
     border-color: #0b95f1; /* Vermelho padrão */
 }
 
-/* ==========================================================================
-   6. JANELA MODAL (EXPANSÃO PROFISSIONAL)
-   ========================================================================== */
+
 .modal {
     display: none; /* Escondido por padrão */
     position: fixed;
@@ -456,9 +444,7 @@ header .navegacao-primaria li a:hover {
     text-align: center;
 }
 
-/* ==========================================================================
-   7. ANIMAÇÕES GERAIS
-   ========================================================================== */
+
 .reveal {
     opacity: 0;
     transform: translateY(50px);
@@ -630,9 +616,7 @@ header .navegacao-primaria li a:hover {
     font-size: 1.1rem;
 }
 
-/* ==========================================================================
-   8. SEÇÃO PORTFOLIO (CARROSSEL COM EFEITO DE PROFUNDIDADE)
-   ========================================================================== */
+
 .portfolio {
     background-color: #0c0b0b;
     padding: 100px 0;
@@ -824,7 +808,7 @@ header .navegacao-primaria li a:hover {
 
 .carousel-item.active .project-tags-carousel span {
     border-color: #0b95f1;
-    background: rgba(220, 53, 69, 0.1);
+    background: rgba(17, 0, 255, 0.1);
 }
 
 /* Responsividade */
@@ -956,9 +940,6 @@ header .navegacao-primaria li a:hover {
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* ==========================================================================
-   9. MODAL EXPANDIDA LATERALMENTE
-   ========================================================================== */
 /* Ajuste na modal para suportar o layout de duas colunas */
 .modal-body-v2 {
     display: flex;
@@ -1016,9 +997,7 @@ header .navegacao-primaria li a:hover {
         transform: translateX(0);
     }
 }
-/* ==========================================================================
-   10. ESTILO DAS STACKS (GLASSMORPHISM)
-   ========================================================================== */
+
 .stacks-container {
     margin-top: 40px;
     width: 100%;
@@ -1052,15 +1031,15 @@ header .navegacao-primaria li a:hover {
 .stack-item:hover {
     background: rgba(255, 255, 255, 0.15);
     transform: translateY(-5px) scale(1.1);
-    border-color: rgba(220, 53, 69, 0.5);
-    box-shadow: 0 10px 40px rgba(220, 53, 69, 0.2);
+    border-color: rgba(119, 0, 255, 0.5);
+    box-shadow: 0 10px 40px rgba(4, 0, 233, 0.2);
 }
 
 .stack-item i {
     filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
 }
 
-/* Tooltip simples */
+
 .stack-item::after {
     content: attr(title);
     position: absolute;
@@ -1093,9 +1072,7 @@ header .navegacao-primaria li a:hover {
     }
 }
 
-/* ==========================================================================
-   11. FOOTER (SEÇÃO FINAL - DEV SABER)
-   ========================================================================== */
+
 footer {
     background-color: #000;
     padding: 80px 20px 40px;
@@ -1111,7 +1088,7 @@ footer {
 
 .footer_logo {
     font-family: 'Berkshire Swash', cursive;
-    color: #0b95f1; /* Vermelho padrão */
+    color: #0b95f1;
     font-size: 2.8rem;
     margin-bottom: 25px;
 }
@@ -1133,7 +1110,7 @@ footer {
 .footer_social a {
     width: 55px;
     height: 55px;
-    background-color: #1a1a1a; /* Círculo escuro */
+    background-color: #1a1a1a; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1148,13 +1125,13 @@ footer {
 .footer_social a:hover {
     background-color: #0b95f1;
     transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(220, 53, 69, 0.3);
+    box-shadow: 0 10px 20px rgba(87, 0, 248, 0.3);
 }
 
 .footer_divider {
     width: 120px;
     height: 4px;
-    background-color: #333; /* Linha horizontal */
+    background-color: #333; 
     margin: 0 auto 40px;
     border-radius: 10px;
 }

@@ -1,6 +1,4 @@
-/**
- * 1. Dados dos Serviços
- */
+
 const dadosServicos = {
     'web-design': {
         pt: { titulo: 'Analista de Dados', descricao: 'Desenvolvimento de dashboards inteligentes e fluxos de dados otimizados que traduzem métricas em oportunidades de crescimento para o negócio.' },
@@ -29,9 +27,7 @@ const dadosServicos = {
     }
 };
 
-/**
- * 2. Dados dos Projetos
- */
+
 const dadosProjetos = [
     {
         pt: { titulo: "Nasa Explorer", descricao: "Uma plataforma interativa de exploração espacial que utiliza dados em tempo real das APIs da NASA para monitorar asteroides e revelar as maravilhas do cosmos." },
@@ -55,9 +51,7 @@ const dadosProjetos = [
 
 let currentLang = 'pt';
 
-/**
- * 3. Funções da Janela Modal
- */
+
 function abrirModalServico(tipo) {
     const modal = document.getElementById('modal-container');
     const body = document.getElementById('modal-body');
@@ -122,9 +116,7 @@ window.addEventListener('click', (event) => {
     if (event.target === modal) fecharModal();
 });
 
-/**
- * 4. Efeito Máquina de Escrever
- */
+
 function ativaLetra(elemento) {
     const arrayTexto = elemento.innerHTML.split('');
     elemento.innerHTML = '';
@@ -135,9 +127,7 @@ function ativaLetra(elemento) {
     });
 }
 
-/**
- * 5. Tradução
- */
+
 function toggleLanguage(lang) {
     currentLang = lang;
     const btnPt = document.getElementById('btn-pt');
@@ -156,9 +146,7 @@ function toggleLanguage(lang) {
     });
 }
 
-/**
- * 6. SlideShow do Currículo
- */
+
 function sobremim() {
     const divExperiencia = document.querySelectorAll('.experience_content div');
     const liExperiencia = document.querySelectorAll('.experience_content ul li');
@@ -191,9 +179,7 @@ function sobremim() {
     slideShowEdu(0);
 }
 
-/**
- * 7. Menu Mobile
- */
+
 function menuMobol() {
     const ativaMenu = document.querySelector('.fa-bars');
     const navMenu = document.querySelector('header .navegacao-primaria');
@@ -206,9 +192,7 @@ function menuMobol() {
     }
 }
 
-/**
- * 8. Scroll Observer
- */
+
 function observaScroll() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -221,9 +205,7 @@ function observaScroll() {
     document.querySelectorAll('.reveal, .imagem-lateral').forEach(el => observer.observe(el));
 }
 
-/**
- * 9. CARROSSEL COM EFEITO DE PROFUNDIDADE
- */
+
 let currentCarouselIndex = 0;
 let carouselItems = [];
 let totalItems = 0;
