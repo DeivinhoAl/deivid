@@ -3,62 +3,57 @@
  */
 const dadosServicos = {
     'web-design': {
-        titulo: 'Analista de dados',
-        descricao: 'Desenvolvimento de dashboards inteligentes e fluxos de dados otimizados que traduzem métricas em oportunidades de crescimento para o negócio.',
+        pt: { titulo: 'Analista de Dados', descricao: 'Desenvolvimento de dashboards inteligentes e fluxos de dados otimizados que traduzem métricas em oportunidades de crescimento para o negócio.' },
+        en: { titulo: 'Data Analyst', descricao: 'Development of intelligent dashboards and optimized data flows that translate metrics into business growth opportunities.' },
         skills: ['Python (Pandas/NumPy)', 'SQL', 'Machine Learning', 'Power BI', 'Excel Avançado']
     },
     'web-dev': {
-        titulo: 'Web Developer',
-        descricao: 'Desenvolvimento de sistemas e sites robustos com foco em performance, SEO e código limpo.',
+        pt: { titulo: 'Web Developer', descricao: 'Desenvolvimento de sistemas e sites robustos com foco em performance, SEO e código limpo.' },
+        en: { titulo: 'Web Developer', descricao: 'Development of robust systems and websites with a focus on performance, SEO, and clean code.' },
         skills: ['HTML5 / CSS3', 'JavaScript ES6', 'React.js', 'Git / GitHub', 'APIs REST']
     },
     'photography': {
-        titulo: 'Designer',
-        descricao: 'Captura e edição de imagens profissionais para produtos, eventos e branding pessoal.',
-        skills: ['Lightroom', 'Photoshop', 'Composição', 'Iluminação', 'Tratamento de Cor']
+        pt: { titulo: 'Designer', descricao: 'Criação de identidades visuais e interfaces modernas para produtos, eventos e branding pessoal.' },
+        en: { titulo: 'Designer', descricao: 'Creation of visual identities and modern interfaces for products, events, and personal branding.' },
+        skills: ['Figma', 'Photoshop', 'Adobe XD', 'Illustrator', 'Design System']
     },
     'seo': {
-        titulo: 'SEO Analyst',
-        descricao: 'Otimização de sites para mecanismos de busca, aumentando a visibilidade orgânica e o tráfego qualificado.',
+        pt: { titulo: 'Analista SEO', descricao: 'Otimização de sites para mecanismos de busca, aumentando a visibilidade orgânica e o tráfego qualificado.' },
+        en: { titulo: 'SEO Analyst', descricao: 'Search engine optimization, increasing organic visibility and qualified traffic.' },
         skills: ['Google Analytics', 'Search Console', 'Keyword Research', 'On-Page SEO', 'Backlinks']
     },
     'creative': {
-        titulo: 'Software Developer',
-        descricao: 'Desenvolvimento de sistemas de alta performance e soluções de baixo nível, focando em otimização de recursos, estabilidade e arquitetura de software eficiente."',
-        skills: ['C / C++', 'Gerenciamento de Memória (Ponteiros)', 'Estruturas de Dados', 'Multithreading (Pthreads)']
-    },
-    'ux-ui': {
-        titulo: 'UX/UI Design',
-        descricao: 'Design focado na experiência do usuário, criando jornadas intuitivas e interfaces de alta conversão.',
-        skills: ['User Flow', 'Wireframes', 'Teste de Usabilidade', 'Design System', 'Arquitetura de Info']
+        pt: { titulo: 'Software Developer', descricao: 'Desenvolvimento de sistemas de alta performance e soluções de baixo nível, focando em otimização de recursos, estabilidade e arquitetura de software eficiente.' },
+        en: { titulo: 'Software Developer', descricao: 'Development of high-performance systems and low-level solutions, focusing on resource optimization, stability, and efficient software architecture.' },
+        skills: ['C / C++', 'Gerenciamento de Memória', 'Estruturas de Dados', 'Multithreading', '.NET']
     }
 };
 
 /**
  * 2. Dados dos Projetos
- * DICA: Para o Finance App, usei "imagens" (plural) com uma lista [].
  */
 const dadosProjetos = [
     {
-        titulo: "Nasa Explorer",
-        descricao: "Uma plataforma interativa de exploração espacial que utiliza dados em tempo real das APIs da NASA para monitorar asteroides e revelar as maravilhas do cosmos.",
+        pt: { titulo: "Nasa Explorer", descricao: "Uma plataforma interativa de exploração espacial que utiliza dados em tempo real das APIs da NASA para monitorar asteroides e revelar as maravilhas do cosmos." },
+        en: { titulo: "Nasa Explorer", descricao: "An interactive space exploration platform that uses real-time data from NASA APIs to monitor asteroids and reveal the wonders of the cosmos." },
         skills: ["HTML", "CSS", "JS", "NeoWS"],
         imagens: ["img/Nasa.png", "img/Nasa2.png", "img/Nasa3.png"] 
     },
     {
-        titulo: "ERP",
-        descricao: "Sistema Web de gestão empresarial com gráficos interativos, exportação de relatórios e autenticação segura. Focado nas atividades básicas de uma empresa, sendo Cadastro de Produtos, Cadastro de Clientes, Busca de CNPJ, Relatórios Financeiros, Controle de Caixa e sistema de vendas (PDV). Integração com IA para identificação automática de produtos visando suprir a necessidade de um cadastro manual e demorado.",
+        pt: { titulo: "SAGE - ERP", descricao: "Sistema Web de gestão empresarial completo. Focado em Cadastro de Produtos, Clientes, Busca de CNPJ, Relatórios Financeiros e PDV. Integração com IA para identificação automática de produtos." },
+        en: { titulo: "SAGE - ERP", descricao: "Complete business management web system. Focused on Product/Client Registration, CNPJ Search, Financial Reports, and POS. AI integration for automatic product identification." },
         skills: ["Python", "Node.js", "PHP", "Flask"],
-        // Agora suporta múltiplas imagens em uma lista
         imagens: ["img/Sage1.jpeg", "img/Sagepdv.jpeg"] 
     },
     {
-        titulo: "Dashboard PowerBI",
-        descricao: "Dashboard interativo desenvolvido para análise exploratória de dados astronômicos, com foco em exoplanetas descobertos ao longo dos anos.",
+        pt: { titulo: "Dashboard PowerBI", descricao: "Dashboard interativo desenvolvido para análise exploratória de dados astronômicos, com foco em exoplanetas descobertos ao longo dos anos." },
+        en: { titulo: "PowerBI Dashboard", descricao: "Interactive dashboard developed for exploratory analysis of astronomical data, focusing on exoplanets discovered over the years." },
         skills: ["PowerBI", "Data Analytics"],
         imagens: ["img/Dashboard.png"] 
     }
 ];
+
+let currentLang = 'pt';
 
 /**
  * 3. Funções da Janela Modal
@@ -70,10 +65,12 @@ function abrirModalServico(tipo) {
 
     if (!info) return;
 
+    const langInfo = info[currentLang];
+
     body.innerHTML = `
         <div class="modal-body">
-            <h2>${info.titulo}</h2>
-            <p>${info.descricao}</p>
+            <h2>${langInfo.titulo}</h2>
+            <p>${langInfo.descricao}</p>
             <div class="habilidades-grid">
                 ${info.skills.map(skill => `<div class="skill-tag">${skill}</div>`).join('')}
             </div>
@@ -84,9 +81,6 @@ function abrirModalServico(tipo) {
     document.body.style.overflow = 'hidden';
 }
 
-/**
- * Abre o projeto no layout lateral (Suporta uma ou várias imagens)
- */
 function abrirModalProjeto(index) {
     const modal = document.getElementById('modal-container');
     const body = document.getElementById('modal-body');
@@ -94,21 +88,15 @@ function abrirModalProjeto(index) {
 
     if (!projeto) return;
 
-    // Lógica para verificar se há uma lista de imagens ou apenas uma
-    let htmlImagens = "";
-    if (projeto.imagens && Array.isArray(projeto.imagens)) {
-        // Se for uma lista, cria uma tag para cada imagem
-        htmlImagens = projeto.imagens.map(img => `<img src="${img}" alt="${projeto.titulo}" style="margin-bottom: 15px; display: block; border-radius: 8px;">`).join('');
-    } else {
-        // Se for apenas a string antiga, mostra apenas ela
-        htmlImagens = `<img src="${projeto.imagem}" alt="${projeto.titulo}" style="border-radius: 8px;">`;
-    }
+    const langProj = projeto[currentLang];
+
+    let htmlImagens = projeto.imagens.map(img => `<img src="${img}" alt="${langProj.titulo}" style="margin-bottom: 15px; display: block; border-radius: 8px; width: 100%;">`).join('');
 
     body.innerHTML = `
         <div class="modal-body-v2">
             <div class="project-details-text">
-                <h2>${projeto.titulo}</h2>
-                <p>${projeto.descricao}</p>
+                <h2>${langProj.titulo}</h2>
+                <p>${langProj.descricao}</p>
                 <div class="habilidades-grid" style="margin-top:25px;">
                     ${projeto.skills.map(skill => `<div class="skill-tag">${skill}</div>`).join('')}
                 </div>
@@ -125,7 +113,7 @@ function abrirModalProjeto(index) {
 
 function fecharModal() {
     const modal = document.getElementById('modal-container');
-    modal.style.display = 'none';
+    if (modal) modal.style.display = 'none';
     document.body.style.overflow = 'auto';
 }
 
@@ -151,6 +139,7 @@ function ativaLetra(elemento) {
  * 5. Tradução
  */
 function toggleLanguage(lang) {
+    currentLang = lang;
     const btnPt = document.getElementById('btn-pt');
     const btnEn = document.getElementById('btn-en');
     
@@ -233,30 +222,20 @@ function observaScroll() {
 }
 
 /**
- * Inicialização Global
- */
-window.onload = () => {
-    const titulo = document.querySelector('.digitando');
-    if (titulo) ativaLetra(titulo);
-    
-    observaScroll();
-    sobremim();
-    menuMobol();
-    inicializarCarrossel();
-}
-
-/**
  * 9. CARROSSEL COM EFEITO DE PROFUNDIDADE
  */
 let currentCarouselIndex = 0;
-const carouselItems = document.querySelectorAll('.carousel-item');
-const totalItems = carouselItems.length;
+let carouselItems = [];
+let totalItems = 0;
 
 function atualizarCarrossel() {
     const track = document.getElementById('carouselTrack');
     const container = document.querySelector('.carousel-container');
     
     if (!track || !container) return;
+
+    carouselItems = document.querySelectorAll('.carousel-item');
+    totalItems = carouselItems.length;
 
     carouselItems.forEach((item, index) => {
         item.classList.remove('active', 'next', 'prev');
@@ -293,7 +272,9 @@ function carrosselAnterior() {
 }
 
 function inicializarCarrossel() {
-    if (carouselItems.length > 0) {
+    carouselItems = document.querySelectorAll('.carousel-item');
+    totalItems = carouselItems.length;
+    if (totalItems > 0) {
         atualizarCarrossel();
     }
 }
@@ -302,3 +283,16 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') carrosselAnterior();
     if (e.key === 'ArrowRight') carrosselProximo();
 });
+
+/**
+ * Inicialização Global
+ */
+window.onload = () => {
+    const titulo = document.querySelector('.digitando');
+    if (titulo) ativaLetra(titulo);
+    
+    observaScroll();
+    sobremim();
+    menuMobol();
+    inicializarCarrossel();
+}
