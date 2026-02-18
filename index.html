@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deivid Almeida | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-icons">
+            <a href="https://github.com" target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/2912/2912061.png" alt="Mascote Dino" style="width: 40px; height: auto;">
+            </a>
+        </div>
+
+        <h1 data-pt="Deivid Almeida" data-en="Deivid Almeida">Deivid <span>Almeida</span></h1>
+
+        <nav>
+            <ul class="navegacao-primaria">
+                <li><a href="#home" data-pt="Home" data-en="Home">Home</a></li>
+                <li><a href="#about" data-pt="Sobre" data-en="About">About</a></li>
+                <li><a href="#resume" data-pt="Currículo" data-en="Resume">Resume</a></li>
+                <li><a href="#portfolio" data-pt="Portfólio" data-en="Portfolio">Portfolio</a></li>
+                <li><a href="#contact" data-pt="Contato" data-en="Contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="language-switcher">
+            <button onclick="toggleLanguage('pt')" id="btn-pt" class="active">PT</button>
+            <span>/</span>
+            <button onclick="toggleLanguage('en')" id="btn-en">EN</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" aria-label="seção curriculo download Deivid" class="section-div" >
+            <div class="reveal">
+                <h2 data-pt="Olá, eu sou" data-en="Hi There, I'm">Olá, eu sou</h2>
+                <h2 class="digitando" data-pt="Desenvolvedor Web e UX/UI Design" data-en="Web Developer and UX/UI Design">
+                    Desenvolvedor Full Stack
+                </h2>
+                <p data-pt="Sou apaixonado por criar interfaces modernas e funcionais, focando na melhor experiência para o usuário." 
+                   data-en="I am passionate about creating modern and functional interfaces, focusing on the best experience for the user.">
+                   Sou apaixonado por criar interfaces modernas e funcionais, focando na melhor experiência para o usuário.
+                </p>
+                <a href="img/Deivid.pdf" data-pt="Baixar CV" data-en="Download CV"> Baixar CV </a>
+
+                <div class="stacks-container">
+                    <div class="stack-grid">
+                        <div class="stack-item" title="Figma"><i class="fa-brands fa-figma" style="color: #F24E1E;"></i></div>
+                        <div class="stack-item" title="Photoshop"><i class="fa-solid fa-file-image" style="color: #31A8FF;"></i></div>
+                        <div class="stack-item" title="Illustrator"><i class="fa-solid fa-bezier-curve" style="color: #FF9A00;"></i></div>
+                        <div class="stack-item" title="JavaScript"><i class="fa-brands fa-js" style="color: #F7DF1E;"></i></div>
+                        <div class="stack-item" title="TypeScript"><i class="fa-solid fa-code" style="color: #3178C6;"></i></div>
+                        <div class="stack-item" title="HTML5"><i class="fa-brands fa-html5" style="color: #E34F26;"></i></div>
+                        <div class="stack-item" title="CSS3"><i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i></div>
+                        
+                        <div class="stack-item" title="React"><i class="fa-brands fa-react" style="color: #61DAFB;"></i></div>
+                        <div class="stack-item" title="Node.js"><i class="fa-brands fa-node-js" style="color: #339933;"></i></div>
+                        
+                        <div class="stack-item" title="MongoDB"><i class="fa-solid fa-leaf" style="color: #47A248;"></i></div>
+                        <div class="stack-item" title="Oracle">  <i class="fa-solid fa-database" style="color: #F80000;"></i></div>
+                        <div class="stack-item" title="VS Code"><i class="fa-solid fa-terminal" style="color: #007ACC;"></i></div>
+                        <div class="stack-item" title="GitHub"><i class="fa-brands fa-github" style="color: #FFFFFF;"></i></div>
+                        <div class="stack-item" title="GitLab"><i class="fa-brands fa-gitlab" style="color: #FC6D26;"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-image reveal">
+                <img src="img/deivid.jpg" alt="Deivid Almeida">
+            </div>
+        </section>
+
+        <article id="about" aria-label="seção sobre mim" class="sobre">
+            <div class="sobre_container">
+                <div class="sobre_titulo reveal">
+                    <h1 data-pt="Sobre mim" data-en="About-me">Sobre mim</h1>
+                    <p data-pt="Perfil Profissional - Saiba mais sobre mim" data-en="Professional Profile - There is About me">
+                        Perfil Profissional - Saiba mais sobre mim
+                    </p>
+                    <div class="detalhe_pontos">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+
+                <div class="sobre_grid">
+                    <div class="sobre_imagem imagem-lateral">
+                        <img src="img/maratona.png" alt="Deivid Almeida">
+                    </div>
+                    <div class="sobre_conteudo reveal">
+                        <div class="sobre_texto">
+                            <h1 data-pt="Um pouco de mim.." data-en="I'm Dev Full Stack - Deivid">Um pouco de mim...</h1>
+                            <p data-pt="Sou desenvolvedor apaixonado por criar interfaces modernas e funcionais, focando sempre na melhor experiência para o usuário." 
+                               data-en="I am a developer passionate about creating modern and functional interfaces, always focusing on the best user experience.">
+                               Meu nome é Deivid, sou estudante de Ciência da Computação na UNIFAGOC, atualmente no 7º período. Atuo na área de computação desde os 15 anos e, atualmente, trabalho profissionalmente no setor. Ao longo dessa trajetória, adquiri experiência no desenvolvimento de diversos projetos, tanto no meio acadêmico quanto em projetos pessoais, além de ter participado de competições durante minha formação técnica no CEFET-MG e atuado como staff na Maratona Mineira de Programação.
+                                <br><br>
+                               Atualmente, tenho grande interesse na área de dados, desenvolvendo projetos com ferramentas Oracle, bem como no desenvolvimento em .NET, embora possua sólida experiência em desenvolvimento web.
+                            </p>
+                        </div>
+                        <div class="sobre_info">
+                            <p><i class="fa-solid fa-calendar-days"></i><span data-pt="Nascimento: 26 Out 2003" data-en="Date of birth: 26 Oct 2001">Nascimento: 26 Out 2003</span></p>
+                            <p><i class="fa-solid fa-laptop-code"></i><span data-pt="Freelance: Disponível" data-en="Freelance: Available">Freelance: Disponível</span></p>
+                            <p><i class="fa-solid fa-location-dot"></i><span data-pt="Endereço: Astolfo Dutra, Brasil" data-en="Address: Astolfo Dutra, Brazil">Endereço: Astolfo Dutra, Brasil</span></p>
+                            <p><i class="fa-solid fa-globe"></i><span data-pt="Idiomas: Português, Inglês" data-en="Spoken Languages: Brazil, English">Idiomas: Português, Inglês</span></p>
+                            <p><i class="fa-solid fa-flag"></i><span data-pt="Nacionalidade: Brasileira" data-en="Nationality: Brazilian">Nacionalidade: Brasileira</span></p>
+                            <p><i class="fa-solid fa-phone-volume"></i><span data-pt="Telefone: +32 99840-2691" data-en="Phone: +32 99840-2691">Telefone: +32 99840-2691</span></p>
+                            <p><i class="fa-solid fa-envelope"></i><span>Email: deividoliveiraalmeidabr.com</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <section class="services" id="services-section">
+            <div class="sobre_titulo reveal">
+                <h1 data-pt="Serviços" data-en="Services">Serviços</h1>
+                <p data-pt="Perfil Profissional - O que eu ofereço" data-en="Professional Profile - What I offer">
+                    Perfil Profissional - O que eu ofereço
+                </p>
+                <div class="detalhe_pontos">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+
+            <div class="my_services reveal">
+                <ul aria-label="Serviços">
+                    <li onclick="abrirModalServico('web-design')">
+                        <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+                        <h3 data-pt="Web Design" data-en="Web Design">Analista de Dados</h3>
+                        <p data-pt="Clique para saber mais" data-en="Click to learn more">Clique para saber mais</p>
+                    </li>
+                    <li onclick="abrirModalServico('web-dev')">
+                        <i class="fa-solid fa-code"></i>
+                        <h3 data-pt="Web Developer" data-en="Web Developer">Web Developer</h3>
+                        <p data-pt="Clique para saber mais" data-en="Click to learn more">Clique para saber mais</p>
+                    </li>
+                    <li onclick="abrirModalServico('photography')">
+                        <i class="fa-solid fa-palette"></i>
+                        <h3 data-pt="Design" data-en="Design">Design</h3>
+                        <p data-pt="Clique para saber mais" data-en="Click to learn more">Clique para saber mais</p>
+                    </li>
+                    <li onclick="abrirModalServico('seo')">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <h3 data-pt="SEO Analyst" data-en="SEO Analyst">SEO Analyst</h3>
+                        <p data-pt="Clique para saber mais" data-en="Click to learn more">Clique para saber mais</p>
+                    </li>
+                    <li onclick="abrirModalServico('creative')">
+                        <i class="fa-solid fa-terminal"></i>
+                        <h3 data-pt="Software Developer" data-en="Software Developer">Software Developer</h3>
+                        <p data-pt="Clique para saber mais" data-en="Click to learn more">Clique para saber mais</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="my_resume" id="resume">
+            <div class="sobre_titulo reveal">
+                <h1 data-pt="Experiência" data-en="Experience">Experience</h1>
+                <p data-pt="Perfil Profissional - Minha experiência" data-en="Professional Profile - My Experience">
+                    Perfil Profissional - Minha experiência
+                </p>
+                <div class="detalhe_pontos">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+
+            <div class="resume_generico reveal">
+                <div class="experience_box">
+                    <h2 class="experience"><i class="fa-solid fa-handshake"></i>Experience</h2>
+                    <div class="experience_content">
+                        <div class="ativo">
+                            <span>2025-Atualmente</span>
+                            <h3>Analista de Suporte - Simplesoft</h3>
+                            <p>Prestar atendimento técnico aos usuários, diagnosticar e resolver problemas de hardware, software e rede, instalar e configurar sistemas, realizar manutenção preventiva e corretiva, documentar chamados, orientar usuários e garantir o bom funcionamento da infraestrutura de TI.</p>
+                        </div>
+                        <div>
+                            <span>2024-Atualmente</span>
+                            <h3>Freelance - Workana</h3>
+                            <p>Atuar como desenvolvedor full stack freelancer envolve assumir o ciclo completo de desenvolvimento de soluções digitais, desde o levantamento de requisitos com o cliente, definição de escopo e arquitetura, criação de interfaces (front-end), implementação de regras de negócio e APIs (back-end), modelagem e manutenção de banco de dados, integração com serviços externos, testes, deploy, correções, otimizações de performance e segurança, além de prestar suporte, realizar manutenção contínua e gerenciar prazos, comunicação e entregas do projeto de forma autônoma.</p>
+                        </div>
+                        <ul>
+                            <li class="ativo"><i class="fa-sharp fa-solid fa-circle"></i></li>
+                            <li><i class="fa-sharp fa-solid fa-circle"></i></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="education_box">
+                    <h2 class="education"><i class="fa-solid fa-book"></i>Education</h2>
+                    <div class="education_content">
+                        <div class="ativo">
+                            <span>2022-2026</span>
+                            <h3>Ciência da Computação - UniFagoc </h3>
+                            <p>Formação focada em desenvolvimento de software, algoritmos, sistemas computacionais e resolução de problemas com tecnologia.</p>
+                        </div>
+                        <ul>
+                            <li class="ativo"><i class="fa-sharp fa-solid fa-circle"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio" id="portfolio">
+            <div class="sobre_titulo reveal">
+                <h1 data-pt="Meus Projetos" data-en="My Projects">Meus Projetos</h1>
+                <p data-pt="Trabalhos Recentes" data-en="Recent Works">Trabalhos Recentes</p>
+                <div class="detalhe_pontos">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+
+            <div class="carousel-wrapper reveal">
+                <!-- Botão Anterior -->
+                <button class="carousel-btn carousel-btn-prev" onclick="carrosselAnterior()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <!-- Container do Carrossel -->
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                         <div class="carousel-item" data-index="1">
+                            <div class="project-card-carousel" onclick="abrirModalProjeto(1)">
+                                <img src="img/SAGE.png" alt="Projeto 2">
+                                <div class="project-info-carousel">
+                                    <h3>Sistema Auxiliar de Gestão Empresarial</h3>
+                                    <p>SAGE</p>
+                                    <div class="project-tags-carousel">
+                                        <span>ERP System</span>
+                                        <span>Python</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item" data-index="0">
+                            <div class="project-card-carousel" onclick="abrirModalProjeto(0)">
+                                <img src="img/Nasalogo.png" alt="Projeto 1">
+                                <div class="project-info-carousel">
+                                    <h3>Nasa Explorer</h3>
+                                    <p>Nasa Explorer</p>
+                                    <div class="project-tags-carousel">
+                                        <span>UX/UI</span>
+                                        <span>WEB APPLICATION</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+
+                        <div class="carousel-item" data-index="2">
+                            <div class="project-card-carousel" onclick="abrirModalProjeto(2)">
+                                <img src="img/images.png" alt="Projeto 3">
+                                <div class="project-info-carousel">
+                                    <h3>Dashboard PowerBI</h3>
+                                    <p>ANALYTICS</p>
+                                    <div class="project-tags-carousel">
+                                        <span>DASHBOARD</span>
+                                        <span>ANALYTICS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botão Próximo -->
+                <button class="carousel-btn carousel-btn-next" onclick="carrosselProximo()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <div id="modal-container" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="fecharModal()">&times;</span>
+                <div id="modal-body">
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+   <footer id="contact">
+            <div class="footer_container">
+                <h1 class="footer_logo">Deivid Almeida</h1>
+                <p class="footer_text">
+                    "Não é o mais forte que sobrevive, nem o mais inteligente, mas o que melhor se adapta às mudanças" - Charles Darwin
+                </p>
+
+                <div class="footer_social">
+                    <a href="https://www.linkedin.com/in/deivinhoai/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/almeida.css/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/DeivinhoAl"><i class="fa-brands fa-github"></i></a>
+                </div>
+
+                <div class="footer_divider"></div>
+
+                <p class="footer_copy">
+                    Todos os direitos reservados - Deivid Almeida &copy; 2026
+                </p>
+            </div>
+        </footer>
+
+        <div id="modal-container" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="fecharModal()">&times;</span>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
