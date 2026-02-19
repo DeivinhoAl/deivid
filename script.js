@@ -1,4 +1,3 @@
-
 const dadosServicos = {
     'web-design': {
         pt: { titulo: 'Analista de Dados', descricao: 'Desenvolvimento de dashboards inteligentes e fluxos de dados otimizados que traduzem métricas em oportunidades de crescimento para o negócio.' },
@@ -91,11 +90,11 @@ function abrirModalProjeto(index) {
             <div class="project-details-text">
                 <h2>${langProj.titulo}</h2>
                 <p>${langProj.descricao}</p>
-                <div class="habilidades-grid" style="margin-top:25px;">
-                    ${projeto.skills.map(skill => `<div class="skill-tag">${skill}</div>`).join('')}
+                <div class="habilidades-grid">
+                    ${projeto.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
                 </div>
             </div>
-            <div class="project-details-image" style="max-height: 70vh; overflow-y: auto;">
+            <div class="project-details-image">
                 ${htmlImagens}
             </div>
         </div>
