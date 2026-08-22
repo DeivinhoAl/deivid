@@ -1,330 +1,135 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deivid Almeida | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="theme-color" content="#0a0916">
+    <meta name="description" content="Portfólio de Deivid Almeida, Software Developer e Data Analyst.">
+    <title>Deivid Almeida — Systems &amp; Data</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
+    <div class="technical-grid" aria-hidden="true"></div>
+    <div class="scroll-meter" aria-hidden="true"><span id="scrollMeter"></span></div>
 
-    <header>
-        <div class="header-icons">
-            <a href="https://github.com" target="_blank">
-              <img src="https://img.icons8.com/?size=100&id=43988&format=png&color=000000" alt="Mascote Dino" style="width: 40px; height: auto;">
-            </a>
-        </div>
-
-        <h1 data-pt="Deivid Almeida" data-en="Deivid Almeida">Deivid <span>Almeida</span></h1>
-
-        <nav>
-            <ul class="navegacao-primaria">
-                <li><a href="#home" data-pt="Home" data-en="Home">Home</a></li>
-                <li><a href="#about" data-pt="Sobre" data-en="About">About</a></li>
-                <li><a href="#resume" data-pt="Currículo" data-en="Resume">Resume</a></li>
-                <li><a href="#portfolio" data-pt="Portfólio" data-en="Portfolio">Portfolio</a></li>
-                <li><a href="#contact" data-pt="Contato" data-en="Contact">Contact</a></li>
-            </ul>
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Navegação principal">
+            <a href="#about" data-section="about" data-i18n="nav.profile">Perfil</a>
+            <a href="#capabilities" data-section="capabilities" data-i18n="nav.expertise">Expertise</a>
+            <a href="#projects" data-section="projects" data-i18n="nav.projects">Projetos</a>
+            <a href="#journey" data-section="journey" data-i18n="nav.journey">Trajetória</a>
         </nav>
-
-        <div class="language-switcher">
-            <button onclick="toggleLanguage('pt')" id="btn-pt" class="active">
-                <img src="https://cdn-icons-png.flaticon.com/512/206/206597.png" alt="Brasil" style="width: 16px; margin-right: 4px; vertical-align: middle;">PT
-            </button>
-            <span>/</span>
-            <button onclick="toggleLanguage('en')" id="btn-en">
-                <img src="https://cdn-icons-png.flaticon.com/512/206/206626.png" alt="USA" style="width: 16px; margin-right: 4px; vertical-align: middle;">EN
-            </button>
+        <div class="header-actions">
+            <div class="language-switcher" aria-label="Selecionar idioma">
+                <button class="language-button active" type="button" data-language="pt">PT</button>
+                <span aria-hidden="true">/</span>
+                <button class="language-button" type="button" data-language="en">EN</button>
+            </div>
+            <a class="header-contact" href="https://www.workana.com/freelancer/59c69e3e5c8a24d9ad059c8c7bcb4b9e" target="_blank" rel="noreferrer" data-i18n="nav.workana">Workana <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
         </div>
     </header>
 
+    <div class="mobile-menu" aria-hidden="true">
+        <a href="#about" data-i18n="nav.profile">Perfil</a>
+        <a href="#capabilities" data-i18n="nav.expertise">Expertise</a>
+        <a href="#projects" data-i18n="nav.projects">Projetos</a>
+        <a href="#journey" data-i18n="nav.journey">Trajetória</a>
+        <a href="#contact" data-i18n="nav.contact">Contato</a>
+    </div>
+
     <main>
-        <section id="home" aria-label="seção curriculo download Deivid" class="section-div" >
-            <div class="reveal">
-                <h2 data-pt="Olá, eu sou" data-en="Hi There, I'm">Olá, eu sou</h2>
-                <h2 class="digitando" data-pt="Desenvolvedor Web e UX/UI Design" data-en="Web Developer and UX/UI Design">
-                    Desenvolvedor Full Stack
-                </h2>
-                <p data-pt="Seja bem-vindo ao meu portfólio.
-Aqui você encontrará um pouco sobre minha trajetória, habilidades e projetos desenvolvidos. Fique à vontade para explorar meus trabalhos e experiências. Para mais informações, entre em contato." 
-                   data-en="Welcome to my portfolio. Here you will find a bit about my journey, skills, and developed projects. Feel free to explore my work and experience. For more information, please get in touch.">
-                   Seja bem-vindo ao meu portfólio. <br> <br>
-                    Aqui você encontrará um pouco sobre minha trajetória, habilidades e projetos desenvolvidos. Fique à vontade para explorar meus trabalhos e experiências. Para mais informações, entre em contato.
-                </p>
-                <a href="img/curriculo.pdf" download="DeividAlmeida_CV.pdf" data-pt="Baixar CV" data-en="Download CV"> Baixar CV </a>
-
-                <div class="stacks-container">
-                    <div class="stack-grid">
-                        <div class="stack-item" title="Figma"><i class="fa-brands fa-figma" style="color: #F24E1E;"></i></div>
-                        <div class="stack-item" title="Photoshop"><i class="fa-solid fa-file-image" style="color: #31A8FF;"></i></div>
-                        <div class="stack-item" title="Illustrator"><i class="fa-solid fa-bezier-curve" style="color: #FF9A00;"></i></div>
-                        <div class="stack-item" title="JavaScript"><i class="fa-brands fa-js" style="color: #F7DF1E;"></i></div>
-                        <div class="stack-item" title="TypeScript"><i class="fa-solid fa-code" style="color: #3178C6;"></i></div>
-                        <div class="stack-item" title="HTML5"><i class="fa-brands fa-html5" style="color: #E34F26;"></i></div>
-                        <div class="stack-item" title="CSS3"><i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i></div>
-                        
-                        <div class="stack-item" title="React"><i class="fa-brands fa-react" style="color: #61DAFB;"></i></div>
-                        <div class="stack-item" title="Node.js"><i class="fa-brands fa-node-js" style="color: #339933;"></i></div>
-                        
-                        <div class="stack-item" title="MongoDB"><i class="fa-solid fa-leaf" style="color: #47A248;"></i></div>
-                        <div class="stack-item" title="Oracle">  <i class="fa-solid fa-database" style="color: #F80000;"></i></div>
-                        <div class="stack-item" title="VS Code"><i class="fa-solid fa-terminal" style="color: #007ACC;"></i></div>
-                        <div class="stack-item" title="GitHub"><i class="fa-brands fa-github" style="color: #FFFFFF;"></i></div>
-                        <div class="stack-item" title="GitLab"><i class="fa-brands fa-gitlab" style="color: #FC6D26;"></i></div>
-                    </div>
+        <section class="hero section-shell" id="home">
+            <div class="hero-copy reveal">
+                <h1><span data-i18n="hero.titleTop">Deivid</span><em data-i18n="hero.titleAccent">Almeida.</em><span data-i18n="hero.titleBottom">Software, dados<br>&amp; design.</span></h1>
+                <p class="hero-description" data-i18n="hero.description">Desenvolvo produtos e sistemas empresariais que funcionam de verdade: arquitetura, dados, automação e uma interface que as pessoas querem usar.</p>
+                <div class="hero-cta">
+                    <a class="button button-primary" href="#projects"><span data-i18n="hero.ctaProjects">Explorar projetos</span><i class="fa-solid fa-arrow-down"></i></a>
+                    <a class="button button-ghost" href="img/curriculo.pdf" download="DeividAlmeida_CV.pdf"><i class="fa-solid fa-file-arrow-down"></i><span data-i18n="hero.ctaResume">Baixar currículo</span></a>
+                    <a class="button button-workana" href="https://www.workana.com/freelancer/59c69e3e5c8a24d9ad059c8c7bcb4b9e" target="_blank" rel="noreferrer"><span>Workana</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
+                <div class="tech-ribbon" aria-label="Tecnologias principais"><span>DELPHI</span><i></i><span>C#/.NET</span><i></i><span>ORACLE PL/SQL</span><i></i><span>AWS</span><i></i><span>POWER BI</span><i></i><span>DESIGN</span></div>
             </div>
-            <div class="main-image reveal">
-                <img src="img/deivid.jpg" alt="Deivid Almeida">
+
+            <div class="identity-module reveal" aria-label="Cartão de identidade profissional">
+                <div class="module-topline"><span>PORTRAIT // 01</span><span>BR-MG</span></div>
+                <div class="portrait-frame">
+                    <img src="img/deivid-profile-2026.jpeg" alt="Deivid Almeida" class="portrait-image">
+                </div>
+                <div class="identity-data">
+                    <div><span class="data-key" data-i18n="identity.roleLabel">ATUALMENTE</span><strong data-i18n="identity.role">Desenvolvedor</strong></div>
+                    <div><span class="data-key" data-i18n="identity.focusLabel">EM PARALELO</span><strong data-i18n="identity.focus">Analista de Dados · Designer</strong></div>
+                </div>
+                <div class="identity-footer"><span class="pulse-ring"></span><span data-i18n="identity.footer">SISTEMAS · DADOS · DESIGN</span></div>
             </div>
+            <div class="hero-index" aria-hidden="true"><span>01</span><i></i><span>04</span></div>
         </section>
 
-        <article id="about" aria-label="seção sobre mim" class="sobre">
-            <div class="sobre_container">
-                <div class="sobre_titulo reveal">
-                    <h1 data-pt="Sobre mim" data-en="About-me">Sobre mim</h1>
-                    <p data-pt="Perfil Profissional - Saiba mais sobre mim" data-en="Professional Profile - There is About me">
-                        Perfil Profissional - Saiba mais sobre mim
-                    </p>
-                    <div class="detalhe_pontos">
-                        <span></span><span></span><span></span>
-                    </div>
-                </div>
-
-                <div class="sobre_grid">
-                    <div class="sobre_imagem imagem-lateral">
-                        <img src="img/maratona.png" alt="Deivid Almeida">
-                    </div>
-                    <div class="sobre_conteudo reveal">
-                        <div class="sobre_texto">
-                            <h1 data-pt="Um pouco de mim.." data-en="I'm Dev Full Stack - Deivid">Um pouco de mim...</h1>
-                            <p data-pt="Meu nome é Deivid, sou estudante de Ciência da Computação na UNIFAGOC, atualmente no 7º período. Atuo na área de computação desde os 15 anos e, atualmente, trabalho profissionalmente no setor. Ao longo dessa trajetória, adquiri experiência no desenvolvimento de diversos projetos, tanto no meio acadêmico quanto em projetos pessoais, além de ter participado de competições durante minha formação técnica no CEFET-MG e atuado como staff na Maratona Mineira de Programação.
-                               Atualmente, tenho grande interesse na área de dados, desenvolvendo projetos com ferramentas Oracle, bem como no desenvolvimento em .NET, embora possua sólida experiência em desenvolvimento web." 
-                               data-en="My name is Deivid, and I am a Computer Science student at UNIFAGOC, currently in my 7th semester. I have been working in the field of computing since I was 15 years old and currently work professionally in the industry. Throughout this journey, I have gained experience developing various projects, both academic and personal, in addition to participating in competitions during my technical education at CEFET-MG and serving as staff at the Minas Gerais Programming Marathon.
-
-Currently, I have a strong interest in the data field, developing projects with Oracle tools, as well as in .NET development, although I also have solid experience in web development.">
-                               Meu nome é Deivid, sou estudante de Ciência da Computação na UNIFAGOC, atualmente no 7º período. Atuo na área de computação desde os 15 anos e, atualmente, trabalho profissionalmente no setor. Ao longo dessa trajetória, adquiri experiência no desenvolvimento de diversos projetos, tanto no meio acadêmico quanto em projetos pessoais, além de ter participado de competições durante minha formação técnica no CEFET-MG e atuado como staff na Maratona Mineira de Programação.
-                                <br><br>
-                               Atualmente, tenho grande interesse na área de dados, desenvolvendo projetos com ferramentas Oracle, bem como no desenvolvimento em .NET, embora possua sólida experiência em desenvolvimento web.
-                            </p>
-                        </div>
-                        <div class="sobre_info">
-                            <p><i class="fa-solid fa-calendar-days"></i><span data-pt="Nascimento: 26 Out 2003" data-en="Date of birth: 26 Oct 2001">Nascimento: 26 Out 2003</span></p>
-                            <p><i class="fa-solid fa-laptop-code"></i><span data-pt="Freelance: Disponível" data-en="Freelance: Available">Freelance: Disponível</span></p>
-                            <p><i class="fa-solid fa-location-dot"></i><span data-pt="Endereço: Astolfo Dutra, Brasil" data-en="Address: Astolfo Dutra, Brazil">Endereço: Astolfo Dutra, Brasil</span></p>
-                            <p><i class="fa-solid fa-globe"></i><span data-pt="Idiomas: Português, Inglês" data-en="Spoken Languages: Brazil, English">Idiomas: Português, Inglês</span></p>
-                            <p><i class="fa-solid fa-flag"></i><span data-pt="Nacionalidade: Brasileira" data-en="Nationality: Brazilian">Nacionalidade: Brasileira</span></p>
-                            <p><i class="fa-solid fa-phone-volume"></i><span data-pt="Telefone: +32 99840-2691" data-en="Phone: +32 99840-2691">Telefone: +32 99840-2691</span></p>
-                            <p><i class="fa-solid fa-envelope"></i><span>Email: deividoliveiraalmeidabr.com</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
-
-        <section class="services" id="services-section">
-            <div class="sobre_titulo reveal">
-                <h1 data-pt="Serviços" data-en="Services">Serviços</h1>
-                <p data-pt="Perfil Profissional - O que eu ofereço" data-en="Professional Profile - What I offer">
-                    Perfil Profissional - O que eu ofereço
-                </p>
-                <div class="detalhe_pontos">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-
-            <div class="my_services reveal">
-                <ul aria-label="Serviços">
-                    <li onclick="abrirModalServico('web-design')">
-                        <i class="fa-sharp fa-solid fa-pen-to-square"></i>
-                        <h3 data-pt="Web Design" data-en="Web Design">Analista de Dados</h3>
-                        <p data-pt="Clique para saber mais" data-en="Click to learn more">Clique para saber mais</p>
-                    </li>
-                    <li onclick="abrirModalServico('web-dev')">
-                        <i class="fa-solid fa-code"></i>
-                        <h3 data-pt="Web Developer" data-en="Web Developer">Web Developer</h3>
-                        <p data-pt="Clique para saber mais" data-en="Click to learn more">Clique para saber mais</p>
-                    </li>
-                    <li onclick="abrirModalServico('photography')">
-                        <i class="fa-solid fa-palette"></i>
-                        <h3 data-pt="Design" data-en="Design">Design</h3>
-                        <p data-pt="Clique para saber mais" data-en="Click to learn more">Clique para saber mais</p>
-                    </li>
-                    <li onclick="abrirModalServico('seo')">
-                        <i class="fa-solid fa-chart-line"></i>
-                        <h3 data-pt="SEO Analyst" data-en="SEO Analyst">SEO Analyst</h3>
-                        <p data-pt="Clique para saber mais" data-en="Click to learn more">Clique para saber mais</p>
-                    </li>
-                    <li onclick="abrirModalServico('creative')">
-                        <i class="fa-solid fa-terminal"></i>
-                        <h3 data-pt="Software Developer" data-en="Software Developer">Software Developer</h3>
-                        <p data-pt="Clique para saber mais" data-en="Click to learn more">Clique para saber mais</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="my_resume" id="resume">
-            <div class="sobre_titulo reveal">
-                <h1 data-pt="Experiência" data-en="Experience">Experience</h1>
-                <p data-pt="Perfil Profissional - Minha experiência" data-en="Professional Profile - My Experience">
-                    Perfil Profissional - Minha experiência
-                </p>
-                <div class="detalhe_pontos">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-
-            <div class="resume_generico reveal">
-                <div class="experience_box">
-                    <h2 class="experience"><i class="fa-solid fa-handshake"></i>Experience</h2>
-                    <div class="experience_content">
-                        <div class="ativo">
-                            <span>2025-Atualmente</span>
-                            <h3>Analista de Suporte - Simplesoft</h3>
-                            <p>Prestar atendimento técnico aos usuários, diagnosticar e resolver problemas de hardware, software e rede, instalar e configurar sistemas, realizar manutenção preventiva e corretiva, documentar chamados, orientar usuários e garantir o bom funcionamento da infraestrutura de TI.</p>
-                        </div>
-                        <div>
-                            <span>2024-Atualmente</span>
-                            <h3>Freelance - Workana</h3>
-                            <p>Atuar como desenvolvedor full stack freelancer envolve assumir o ciclo completo de desenvolvimento de soluções digitais, desde o levantamento de requisitos com o cliente, definição de escopo e arquitetura, criação de interfaces (front-end), implementação de regras de negócio e APIs (back-end), modelagem e manutenção de banco de dados, integração com serviços externos, testes, deploy, correções, otimizações de performance e segurança, além de prestar suporte, realizar manutenção contínua e gerenciar prazos, comunicação e entregas do projeto de forma autônoma.</p>
-                        </div>
+        <section class="profile section-shell" id="about">
+            <div class="section-heading reveal"><p class="eyebrow"><span>01.</span> <span data-i18n="profile.kicker">PERFIL PROFISSIONAL</span></p><h2 data-i18n="profile.title">Construo soluções<br>que movem operações.</h2></div>
+            <div class="profile-grid">
+                <article class="dossier-card reveal">
+                    <div class="dossier-header"><span data-i18n="profile.dossier">DOSSIÊ PROFISSIONAL</span><span>DA/2026</span></div>
+                    <div class="dossier-content"><p data-i18n="profile.copy">Atualmente trabalho na SimpleSoft — Sistemas de Informação, contribuindo para o desenvolvimento, manutenção e otimização de soluções ERP, estruturas de banco de dados, pipelines de ETL, dashboards analíticos e aplicações críticas para o negócio.</p><p data-i18n="profile.copy2">Entrego soluções escaláveis e eficientes, alinhadas aos objetivos da organização e às necessidades da operação.</p></div>
+                    <div class="expertise-ledger" aria-label="Especialidades técnicas">
+                        <p class="data-key" data-i18n="profile.expertiseLabel">ESPECIALIDADES TÉCNICAS</p>
                         <ul>
-                            <li class="ativo"><i class="fa-sharp fa-solid fa-circle"></i></li>
-                            <li><i class="fa-sharp fa-solid fa-circle"></i></li>
+                            <li data-i18n="profile.skillOne"><span>01</span> Desenvolvimento: Delphi, C#, .NET, Python</li>
+                            <li data-i18n="profile.skillTwo"><span>02</span> Banco de dados: Oracle, PL/SQL, SQL e modelagem</li>
+                            <li data-i18n="profile.skillThree"><span>03</span> Cloud e dados: AWS, Power BI, ETL e visualização</li>
+                            <li data-i18n="profile.skillFour"><span>04</span> Engenharia: POO, APIs, Git e arquitetura de sistemas</li>
+                            <li data-i18n="profile.skillFive"><span>05</span> Enterprise: ERP, automação e análise de sistemas</li>
                         </ul>
                     </div>
-                </div>
-
-                <div class="education_box">
-                    <h2 class="education"><i class="fa-solid fa-book"></i>Education</h2>
-                    <div class="education_content">
-                        <div class="ativo">
-                            <span>2022-2026</span>
-                            <h3>Ciência da Computação - UniFagoc </h3>
-                            <p>Formação focada em desenvolvimento de software, algoritmos, sistemas computacionais e resolução de problemas com tecnologia.</p>
-                        </div>
-                        <ul>
-                            <li class="ativo"><i class="fa-sharp fa-solid fa-circle"></i></li>
-                        </ul>
-                    </div>
+                    <p class="dossier-closing" data-i18n="profile.closing">Sou apaixonado por engenharia de software, bancos de dados, cloud e decisões orientadas por dados — sempre buscando expandir repertório e gerar valor mensurável para o negócio.</p>
+                    <div class="dossier-facts"><div><span class="data-key" data-i18n="profile.factOneKey">FORMAÇÃO</span><strong data-i18n="profile.factOneValue">Ciência da Computação · 8º período</strong></div><div><span class="data-key" data-i18n="profile.factTwoKey">ATUAÇÃO</span><strong data-i18n="profile.factTwoValue">ERP, Dados &amp; Produto</strong></div></div>
+                </article>
+                <div class="specialties reveal">
+                    <p class="data-key" data-i18n="profile.stackLabel">STACK PROFISSIONAL</p>
+                    <div class="skill-cloud"><span class="skill-major">C# / .NET</span><span>Delphi</span><span>Oracle PL/SQL</span><span class="skill-major">Power BI</span><span>AWS</span><span>SQL</span><span>Python</span><span>APIs</span><span>Git</span><span>ERP</span></div>
+                    <div class="profile-note"><i class="fa-solid fa-wand-magic-sparkles"></i><p data-i18n="profile.note">Gosto do ponto onde engenharia encontra design: regras de negócio robustas, dados que explicam decisões e interfaces que diminuem o atrito do trabalho.</p></div>
                 </div>
             </div>
         </section>
 
-        <section class="portfolio" id="portfolio">
-            <div class="sobre_titulo reveal">
-                <h1 data-pt="Meus Projetos" data-en="My Projects">Meus Projetos</h1>
-                <p data-pt="Trabalhos Recentes" data-en="Recent Works">Trabalhos Recentes</p>
-                <div class="detalhe_pontos">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-
-            <div class="carousel-wrapper reveal">
-                <!-- Botão Anterior -->
-                <button class="carousel-btn carousel-btn-prev" onclick="carrosselAnterior()">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-
-                <!-- Container do Carrossel -->
-                <div class="carousel-container">
-                    <div class="carousel-track" id="carouselTrack">
-                         <div class="carousel-item" data-index="1">
-                            <div class="project-card-carousel" onclick="abrirModalProjeto(1)">
-                                <img src="img/SAGE.png" alt="Projeto 2">
-                                <div class="project-info-carousel">
-                                    <h3>Sistema Auxiliar de Gestão Empresarial</h3>
-                                    <p>SAGE</p>
-                                    <div class="project-tags-carousel">
-                                        <span>ERP System</span>
-                                        <span>Python</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item" data-index="0">
-                            <div class="project-card-carousel" onclick="abrirModalProjeto(0)">
-                                <img src="img/Nasalogo.png" alt="Projeto 1">
-                                <div class="project-info-carousel">
-                                    <h3>Nasa Explorer</h3>
-                                    <p>Nasa Explorer</p>
-                                    <div class="project-tags-carousel">
-                                        <span>UX/UI</span>
-                                        <span>WEB APPLICATION</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                       
-
-                        <div class="carousel-item" data-index="2">
-                            <div class="project-card-carousel" onclick="abrirModalProjeto(2)">
-                                <img src="img/images.png" alt="Projeto 3">
-                                <div class="project-info-carousel">
-                                    <h3>Dashboard PowerBI</h3>
-                                    <p>ANALYTICS</p>
-                                    <div class="project-tags-carousel">
-                                        <span>DASHBOARD</span>
-                                        <span>ANALYTICS</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Botão Próximo -->
-                <button class="carousel-btn carousel-btn-next" onclick="carrosselProximo()">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
+        <section class="capabilities section-shell" id="capabilities">
+            <div class="section-heading reveal"><p class="eyebrow"><span>02.</span> <span data-i18n="capabilities.kicker">NÚCLEOS DE ATUAÇÃO</span></p><h2 data-i18n="capabilities.title">Tecnologia com<br>visão de operação.</h2></div>
+            <div class="capability-grid">
+                <article class="capability-card card-cyan reveal"><div class="capability-number">01</div><div class="capability-icon"><i class="fa-solid fa-cubes"></i></div><h3 data-i18n="capabilities.cardOneTitle">Sistemas que sustentam o negócio</h3><p data-i18n="capabilities.cardOneText">Arquitetura, regras e integrações para transformar rotinas em operações confiáveis.</p><div class="card-tags"><span>ERP</span><span>C#/.NET</span><span>DELPHI</span></div></article>
+                <article class="capability-card card-lilac reveal"><div class="capability-number">02</div><div class="capability-icon"><i class="fa-solid fa-chart-network"></i></div><h3 data-i18n="capabilities.cardTwoTitle">Dados que contam a história</h3><p data-i18n="capabilities.cardTwoText">Modelagem, consultas e visualizações que revelam o que os dados têm a dizer.</p><div class="card-tags"><span>ORACLE</span><span>PL/SQL</span><span>POWER BI</span></div></article>
+                <article class="capability-card card-peach reveal"><div class="capability-number">03</div><div class="capability-icon"><i class="fa-solid fa-pen-ruler"></i></div><h3 data-i18n="capabilities.cardThreeTitle">Interfaces que respeitam pessoas</h3><p data-i18n="capabilities.cardThreeText">Design de produto e soluções web que tornam sistemas complexos claros, agradáveis e fáceis de usar.</p><div class="card-tags"><span>UX/UI</span><span>DESIGN</span><span>APIs</span></div></article>
             </div>
         </section>
 
-        <div id="modal-container" class="modal">
-            <div class="modal-content">
-                <span class="close-modal" onclick="fecharModal()">&times;</span>
-                <div id="modal-body">
-                    </div>
+        <section class="projects section-shell" id="projects">
+            <div class="projects-heading reveal"><div class="section-heading"><p class="eyebrow"><span>03.</span> <span data-i18n="projects.kicker">PROJECT ATLAS</span></p><h2 data-i18n="projects.title">Projetos não são cards.<br>São sistemas vivos.</h2></div><p class="projects-intro" data-i18n="projects.intro">Navegue pelos módulos. Cada projeto é apresentado como um dossiê: contexto, peças que o compõem e telas do produto.</p></div>
+            <div class="mission-control reveal">
+                <aside class="project-navigator" aria-label="Selecionar projeto"><div class="navigator-top"><span class="data-key" data-i18n="projects.navigatorLabel">MAPA DE MISSÕES</span><span class="live-indicator"><i></i>LIVE</span></div><div class="map-routes" aria-hidden="true"><span></span><span></span><span></span></div><div class="project-nodes" id="projectNodes"></div><div class="navigator-bottom"><span>NODE_03</span><span data-i18n="projects.selectHint">SELECIONE UM NÓ</span></div></aside>
+                <article class="project-console" aria-live="polite"><div class="console-bar"><span class="console-dot pink"></span><span class="console-dot yellow"></span><span class="console-dot cyan"></span><span>project://atlas</span><span class="console-status" data-i18n="projects.consoleStatus">EM EXIBIÇÃO</span></div><div id="projectCanvas"></div></article>
             </div>
-        </div>
+        </section>
+
+        <section class="journey section-shell" id="journey">
+            <div class="section-heading reveal"><p class="eyebrow"><span>04.</span> <span data-i18n="journey.kicker">LINHA DO TEMPO</span></p><h2 data-i18n="journey.title">Construindo repertório<br>em cada versão.</h2></div>
+            <div class="timeline reveal">
+                <article class="timeline-entry active"><div class="timeline-date">2026 — <span data-i18n="journey.now">AGORA</span></div><div class="timeline-marker"><i></i></div><div class="timeline-content"><span class="data-key" data-i18n="journey.currentType">SIMPLESOFT · SISTEMAS DE INFORMAÇÃO</span><h3 data-i18n="journey.currentTitle">Desenvolvedor</h3><p data-i18n="journey.currentText">Desenvolvimento, manutenção e otimização de soluções ERP e aplicações empresariais críticas.</p></div></article>
+                <article class="timeline-entry"><div class="timeline-date">2026 — <span data-i18n="journey.now">AGORA</span></div><div class="timeline-marker"><i></i></div><div class="timeline-content"><span class="data-key" data-i18n="journey.dataType">SIMPLESOFT · SISTEMAS DE INFORMAÇÃO</span><h3 data-i18n="journey.dataTitle">Analista de Dados</h3><p data-i18n="journey.dataText">Estruturas de banco, ETL, dashboards de analytics e dados a serviço das decisões do negócio.</p></div></article>
+                <article class="timeline-entry"><div class="timeline-date">2024 — <span data-i18n="journey.now">AGORA</span></div><div class="timeline-marker"><i></i></div><div class="timeline-content"><span class="data-key" data-i18n="journey.freelanceType">PROJETOS INDEPENDENTES</span><h3 data-i18n="journey.freelanceTitle">Desenvolvimento &amp; Design · Workana</h3><p data-i18n="journey.freelanceText">Projetos conduzidos de ponta a ponta: entendimento, arquitetura, desenvolvimento, interface e evolução.</p></div></article>
+                <article class="timeline-entry"><div class="timeline-date">2022 — 2026</div><div class="timeline-marker"><i></i></div><div class="timeline-content"><span class="data-key" data-i18n="journey.educationType">FORMAÇÃO</span><h3 data-i18n="journey.educationTitle">Ciência da Computação · UNIFAGOC</h3><p data-i18n="journey.educationText">8º período, aprofundando a base de software, algoritmos, dados e sistemas computacionais.</p></div></article>
+            </div>
+        </section>
     </main>
 
-    <script src="script.js"></script>
-   <footer id="contact">
-            <div class="footer_container">
-                <h1 class="footer_logo">Deivid Almeida</h1>
-                <p class="footer_text">
-                    "Não é o mais forte que sobrevive, nem o mais inteligente, mas o que melhor se adapta às mudanças" - Charles Darwin
-                </p>
+    <footer class="footer section-shell" id="contact"><div class="footer-panel"><p class="eyebrow"><span>05.</span> <span data-i18n="contact.kicker">PRÓXIMA CONEXÃO</span></p><h2 data-i18n="contact.title">Tem um problema<br>interessante?</h2><a class="contact-mail" href="mailto:deividoliveiraalmeidabr.com">deividoliveiraalmeidabr.com <i class="fa-solid fa-arrow-up-right-from-square"></i></a><div class="footer-bottom"><p>© <span id="year"></span> Deivid Almeida</p><div class="social-links"><a href="https://www.linkedin.com/in/deivinhoai/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://github.com/DeivinhoAl" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a><a href="https://www.workana.com/freelancer/59c69e3e5c8a24d9ad059c8c7bcb4b9e" target="_blank" rel="noreferrer" aria-label="Workana" class="workana-link">W</a><a href="https://www.instagram.com/almeida.css/" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></div><p class="footer-status"><span class="status-dot"></span><span data-i18n="contact.status">ABERTO A NOVAS CONEXÕES</span></p></div></div></footer>
 
-                <div class="footer_social">
-                    <a href="https://www.linkedin.com/in/deivinhoai/"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/almeida.css/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://github.com/DeivinhoAl"><i class="fa-brands fa-github"></i></a>
-                </div>
-
-                <div class="footer_divider"></div>
-
-                <p class="footer_copy">
-                    Todos os direitos reservados - Deivid Almeida &copy; 2026
-                </p>
-            </div>
-        </footer>
-
-        <div id="modal-container" class="modal">
-            <div class="modal-content">
-                <span class="close-modal" onclick="fecharModal()">&times;</span>
-                <div id="modal-body"></div>
-            </div>
-        </div>
-    </main>
-
+    <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-backdrop" data-close-modal></div><div class="modal-content"><button class="modal-close" type="button" data-close-modal aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button><div id="modalBody"></div></div></div>
     <script src="script.js"></script>
 </body>
 </html>
