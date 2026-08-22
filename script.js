@@ -63,8 +63,22 @@ function renderProjectCanvas() {
 function renderProject() { renderProjectNodes(); renderProjectCanvas(); }
 
 function openProjectModal() {
-  const project = projects[selectedProject]; const content = project[currentLanguage];
-  modalBody.innerHTML = `<div class="modal-project" style="--active-color:${project.accent}"><p class="eyebrow"><span>${project.index}.</span> ${project.type}</p><h2 class="modal-title" id="modalTitle">${content.modalTitle}</h2><p class="modal-copy">${content.modalCopy}</p><div class="modal-meta">${content.stack.map(skill => `<span>${skill}</span>`).join('')}</div><div class="modal-gallery">${project.images.map(image => `<img src="${image}" alt="Tela do projeto ${project.name}">`).join('')}</div></div>`;
+  const project = projects[selectedProject];
+  const content = project[currentLanguage];
+  const labels = currentLanguage === 'pt'
+    ? { focus: 'EM FOCO', overview: 'VISÃO DO PRODUTO', flow: 'FLUXO DO SISTEMA', modules: 'MÓDULOS ATIVOS', stack: 'TECNOLOGIAS', archive: 'ARQUIVO VISUAL', result: 'INTENÇÃO DO PROJETO', image: 'TELA' }
+    : { focus: 'IN FOCUS', overview: 'PRODUCT OVERVIEW', flow: 'SYSTEM FLOW', modules: 'ACTIVE MODULES', stack: 'TECHNOLOGIES', archive: 'VISUAL ARCHIVE', result: 'PROJECT INTENT', image: 'SCREEN' };
+  const flow = content.modules.map((module, index) => `<div class="case-flow-step"><span>${String(index + 1).padStart(2, '0')}</span><strong>${module}</strong></div>`).join('');
+  const gallery = project.images.slice(1).map((image, index) => `<figure class="case-gallery-card"><img src="${image}" alt="${labels.image} ${index + 2} — ${project.name}"><figcaption>${labels.image} 0${index + 2}</figcaption></figure>`).join('');
+
+  modalBody.innerHTML = `<article class="modal-project case-study" style="--active-color:${project.accent}">
+    <header class="case-header"><div class="case-kicker"><span class="case-index">${project.index}</span><span>${project.type}</span></div><span class="case-focus">${labels.focus}</span></header>
+    <div class="case-title-row"><div><h2 class="modal-title" id="modalTitle">${content.modalTitle}</h2><p class="modal-copy">${content.modalCopy}</p></div><div class="case-project-stamp"><span>PROJECT</span><strong>${project.code}</strong><small>${project.status}</small></div></div>
+    <section class="case-spotlight" aria-label="${labels.overview}"><div class="case-main-image"><img src="${project.images[0]}" alt="${labels.overview} — ${project.name}"><span>${labels.overview}</span></div><div class="case-intent"><p class="case-section-label">${labels.result}</p><p>${content.description}</p><div class="case-quick-facts"><div><span>TYPE</span><strong>${project.type.split('/')[0].trim()}</strong></div><div><span>STATUS</span><strong>${project.status.split(' ')[0]}</strong></div></div></div></section>
+    <section class="case-system"><div class="case-section-heading"><p class="case-section-label">${labels.flow}</p><span>${content.modules.length} ${labels.modules.toLowerCase()}</span></div><div class="case-flow">${flow}</div></section>
+    <section class="case-assets"><div><p class="case-section-label">${labels.stack}</p><div class="modal-meta">${content.stack.map(skill => `<span>${skill}</span>`).join('')}</div></div><div class="case-archive-heading"><p class="case-section-label">${labels.archive}</p><span>${project.images.length} ${currentLanguage === 'pt' ? 'telas selecionadas' : 'selected screens'}</span></div></section>
+    <div class="case-gallery">${gallery}</div>
+  </article>`;
   modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false'); document.body.classList.add('modal-open');
 }
 
